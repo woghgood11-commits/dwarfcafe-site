@@ -185,6 +185,18 @@ a { color: inherit; }
 .member small { display: block; color: var(--brown-mute); font-size: 13px; }
 .member strong { font-size: 16px; letter-spacing: .04em; }
 
+.btn.discord { background: #5865F2; color: #fff; box-shadow: 0 6px 18px rgba(88,101,242,.35); }
+.btn.discord:hover { transform: translateY(-2px); background: #4752C4; }
+.contact { padding-top: 0; }
+.contact-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+  background: var(--paper); border: 1px solid color-mix(in srgb, var(--brown) 16%, transparent);
+  border-radius: 20px; padding: 36px 40px;
+}
+.contact-card p { margin: 0; color: var(--brown-mute); }
+.contact-card p b { color: var(--brown-ink); }
+@media (max-width: 520px) { .contact-card { padding: 28px 22px; } }
+
 footer { background: var(--brown-ink); color: #D9CBBB; padding: 40px 0; font-size: 14px; }
 footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 footer img { width: 34px; opacity: .9; }
@@ -224,6 +236,7 @@ dialog img { border-radius: 10px; max-height: 88vh; width: auto; margin: auto; }
     <ul>
       <li><a class="link" href="#games">게임</a></li>
       <li><a class="link" href="#studio">스튜디오</a></li>
+      <li><a class="link" href="#contact">문의</a></li>
     </ul>
   </div>
 </nav>
@@ -235,7 +248,7 @@ dialog img { border-radius: 10px; max-height: 88vh; width: auto; margin: auto; }
     <p class="en">A tiny game workshop where hammers ring and coffee brews.</p>
     <div class="cta">
       <a class="btn primary" href="#games">신작 보기 ↓</a>
-      <a class="btn ghost" href="#studio">스튜디오 소개</a>
+      <a class="btn ghost" href="https://discord.gg/NN6xvtbbcD" target="_blank" rel="noopener">디스코드 참여</a>
     </div>
   </div>
 </header>
@@ -312,6 +325,9 @@ dialog img { border-radius: 10px; max-height: 88vh; width: auto; margin: auto; }
       </div>
 
       <p class="langs">지원 언어 · 한국어 · English · 日本語 · 简体中文</p>
+      <p style="text-align:center;margin-top:28px">
+        <a class="btn discord" href="https://discord.gg/NN6xvtbbcD" target="_blank" rel="noopener">⚒ 검 강화하기 디스코드</a>
+      </p>
     </div>
   </div>
 </section>
@@ -327,6 +343,19 @@ dialog img { border-radius: 10px; max-height: 88vh; width: auto; margin: auto; }
         <div class="member"><small>기획 · 개발</small><strong>LEE JAE HO</strong></div>
         <div class="member"><small>아트</small><strong>YU SANG KYU</strong></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div>
+        <h2>문의는 디스코드로</h2>
+        <p>게임 문의, 버그 제보, 건의 모두 「검 강화하기」 디스코드에서 받고 있어요.<br>
+          <b>#📮문의</b> · <b>#🐛버그-제보</b> 채널에 남겨 주시면 확인하고 답드릴게요.</p>
+      </div>
+      <a class="btn discord" href="https://discord.gg/NN6xvtbbcD" target="_blank" rel="noopener">디스코드 참여하기 →</a>
     </div>
   </div>
 </section>
