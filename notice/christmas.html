@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>크리스마스 이벤트 · 검 강화하기</title>
+<meta name="description" content="12월 한 달, 검 강화하기에 크리스마스 한정 검 2종이 숨겨져 있습니다. 조건은 비밀 — 매주 공개되는 힌트를 풀어 보세요.">
+<meta name="theme-color" content="#10161F">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://studiodwarfcafe.com/notice/christmas.html">
+<meta property="og:title" content="🎄 검 강화하기 크리스마스 이벤트 — 숨겨진 검을 찾아라">
+<meta property="og:description" content="12월 1일 ~ 31일. 크리스마스 한정 검 2종을 얻는 조건은 비밀! 매주 힌트가 하나씩 공개됩니다.">
+<meta property="og:image" content="https://studiodwarfcafe.com/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css">
+<style>
+:root {
+  --cream: #F7F0E6;
+  --paper: #FFFBF5;
+  --brown: #74594D;
+  --brown-ink: #3E2F28;
+  --forge: #10161F;
+  --forge-2: #18212D;
+  --forge-line: #2A3647;
+  --gold: #E3B04B;
+  --gold-soft: #F5D68A;
+  --ice: #E8EDF2;
+  --ice-mute: #9AA6B4;
+  --snow: #DCEBF5;
+  --holly: #3FA866;
+  --berry: #E5484D;
+  --radius: 14px;
+  --wrap: 880px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--forge); color: var(--ice);
+  font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.7; -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+.wrap { width: min(var(--wrap), 100% - 32px); margin-inline: auto; }
+.pixel { font-family: "Galmuri11", "Galmuri14", monospace; letter-spacing: 0; }
+
+.nav { border-bottom: 1px solid var(--forge-line); background: rgba(16,22,31,.92); position: sticky; top: 0; z-index: 5; backdrop-filter: blur(8px); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img { width: 34px; }
+.brand span { font-weight: 800; letter-spacing: .14em; font-size: 13px; color: var(--cream); }
+.back { text-decoration: none; font-size: 14px; color: var(--ice-mute); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--forge-line); }
+.back:hover { color: var(--ice); border-color: var(--ice-mute); }
+
+/* 첫 화면 — 눈 내리는 대장간 */
+.top { position: relative; overflow: hidden; text-align: center; padding: 72px 0 64px;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(63,168,102,.18), transparent 70%),
+    radial-gradient(ellipse 70% 60% at 50% 110%, rgba(229,72,77,.16), transparent 70%); }
+.top > .wrap { position: relative; z-index: 1; }
+.snow { position: absolute; inset: 0; pointer-events: none; }
+.snow i { position: absolute; top: -10px; width: 4px; height: 4px; background: var(--snow); opacity: .75; animation: fall linear infinite; }
+@keyframes fall { to { transform: translateY(560px); } }
+.tag { display: inline-block; font-size: 13px; color: var(--gold-soft); border: 1px solid rgba(227,176,75,.45); padding: 6px 12px; border-radius: 6px; margin-bottom: 22px; }
+h1 { margin: 0; font-size: clamp(28px, 5vw, 44px); line-height: 1.25; letter-spacing: -0.02em; }
+h1 .accent { color: var(--berry); }
+.period { margin: 18px 0 0; font-size: 17px; color: var(--snow); }
+.period b { color: var(--gold-soft); }
+.status { display: inline-block; margin-top: 18px; font-size: 14px; padding: 6px 14px; border-radius: 999px; background: var(--forge-2); border: 1px solid var(--forge-line); color: var(--ice-mute); }
+.status.live { color: #9BE3B4; border-color: rgba(63,168,102,.6); }
+
+section { padding: 56px 0; border-top: 1px solid var(--forge-line); }
+h2 { margin: 0 0 8px; font-size: 24px; letter-spacing: -0.01em; }
+.lead { margin: 0 0 28px; color: var(--ice-mute); }
+
+/* 보상 — 실루엣 */
+.rewards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.reward { background: var(--forge-2); border: 1px solid var(--forge-line); border-radius: var(--radius); padding: 24px; text-align: center; }
+.reward .slot { width: 150px; aspect-ratio: 1; margin: 0 auto; display: grid; place-items: center; border-radius: 16px;
+  background: radial-gradient(circle at 50% 45%, var(--glow), transparent 70%), #0E141C; border: 1px solid var(--forge-line); }
+.reward img { width: 78%; image-rendering: pixelated; filter: brightness(0) drop-shadow(0 0 10px var(--glow)); }
+.reward h3 { margin: 16px 0 2px; font-size: 18px; color: var(--gold-soft); }
+.reward p { margin: 0; font-size: 14px; color: var(--ice-mute); }
+
+/* 힌트 */
+.hints { display: grid; gap: 12px; }
+.hint { display: grid; grid-template-columns: 92px 1fr; gap: 18px; align-items: center;
+  background: var(--forge-2); border: 1px solid var(--forge-line); border-radius: var(--radius); padding: 18px 22px; }
+.hint .when { text-align: center; }
+.hint .when b { display: block; font-size: 13px; color: var(--ice-mute); font-weight: 600; }
+.hint .when span { font-size: 22px; }
+.hint .text { margin: 0; font-size: 16px; }
+.hint.locked .text { color: #5F6B7A; }
+.hint.open { border-color: rgba(63,168,102,.55); }
+.hint.answer.open { border-color: rgba(227,176,75,.7); background: linear-gradient(90deg, rgba(227,176,75,.10), transparent 60%), var(--forge-2); }
+.hint.answer.open .text { color: var(--gold-soft); font-weight: 600; }
+
+/* 유의사항 */
+.notes { margin: 0; padding-left: 20px; color: var(--ice-mute); }
+.notes li { margin: 6px 0; }
+.notes b { color: var(--ice); }
+
+.cta { text-align: center; padding: 56px 0 72px; border-top: 1px solid var(--forge-line); }
+.cta p { margin: 0 0 18px; color: var(--ice-mute); }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 22px; border-radius: 999px; background: #5865F2; color: #fff; box-shadow: 0 6px 18px rgba(88,101,242,.35); transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-2px); background: #4752C4; }
+
+footer { background: #0B1017; color: #8C97A5; padding: 28px 0; font-size: 13px; text-align: center; }
+
+@media (max-width: 600px) {
+  .rewards { grid-template-columns: 1fr; }
+  .hint { grid-template-columns: 1fr; gap: 6px; text-align: left; }
+  .hint .when { text-align: left; display: flex; gap: 8px; align-items: baseline; }
+  .top { padding: 56px 0 48px; }
+}
+@media (prefers-reduced-motion: reduce) { .snow { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Dwarf Cafe Studio 홈"><img src="../assets/mark_cream.png" alt=""><span>DWARF CAFE STUDIO</span></a>
+    <a class="back" href="../#news">← 공지 목록</a>
+  </div>
+</nav>
+
+<header class="top">
+  <div class="snow" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="tag pixel">📢 검 강화하기 · 시즌 이벤트</span>
+    <h1>🎄 <span class="accent">크리스마스</span> 대장간<br>숨겨진 검을 찾아라</h1>
+    <p class="period">기간 <b>12월 1일 ~ 12월 31일</b></p>
+    <span class="status pixel" id="status">이벤트 준비 중</span>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>이번 시즌에만 벼려지는 검 두 자루</h2>
+    <p class="lead">12월 한 달 동안 대장간 어딘가에 크리스마스 한정 검이 숨겨져 있습니다. 어떤 조건에서 나타나는지는 비밀! 아래 힌트를 풀어 먼저 찾아낸 대장장이가 되어 보세요.</p>
+    <div class="rewards">
+      <div class="reward" style="--glow:rgba(229,72,77,.55)">
+        <div class="slot"><img src="../assets/swords/xmas_candy.png" alt="사탕 막대 검 실루엣"></div>
+        <h3 class="pixel">사탕 막대 검</h3>
+        <p>휘두를 때마다 박하 향이 나는 줄무늬 검</p>
+      </div>
+      <div class="reward" style="--glow:rgba(63,168,102,.6)">
+        <div class="slot"><img src="../assets/swords/xmas_tree.png" alt="크리스마스 트리 검 실루엣"></div>
+        <h3 class="pixel">크리스마스 트리 검</h3>
+        <p>칼끝의 별이 아직도 반짝이는 검</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>대장장이 재의 수수께끼</h2>
+    <p class="lead">힌트는 매주 하나씩 열립니다. 마지막 주에는 정답이 공개돼요.</p>
+    <div class="hints" id="hints">
+      <article class="hint" data-open="12-01" data-text="7ISg66y87J2AIOuIiOuztOudvOulvCDqsqzrjowg64K4IOy5vOuCoOyXkOqyjOunjCDssL7slYTsmKjri6QuIOuUsOucu+2VnCDrjIDsnqXqsITsnZgg6rKA7J2AIOyCsO2DgOydmCDqtIDsi6wg67CW7J2064ukLg==">
+        <div class="when"><span>❄</span><b>12월 1일</b></div><p class="text">🔒 12월 1일에 공개됩니다</p>
+      </article>
+      <article class="hint" data-open="12-08" data-text="66ed7LmY7KeI66eM7Jy866Gc64qUIOu2gOyhse2VmOuLpC4g64yA7J6l7J6l7J2065Ok7J20IOKAmOyghOyEpOKAmeydtOudvCDrtoDrpbTripQg6rK97KeA7JeQ7IScIOy5vOuCoOydtCDsg4gg66qo7Iq17Jy866GcIOqxsOuTreuCmOuKlCDsiJzqsIQsIOyCsO2DgOqwgCDsiqzsqY0g64G87Ja065Og64ukLg==">
+        <div class="when"><span>🔨</span><b>12월 8일</b></div><p class="text">🔒 12월 8일에 공개됩니다</p>
+      </article>
+      <article class="hint" data-open="12-15" data-text="7IKw7YOA64qUIOuzgOuNleyKpOufveuLpC4g7IS4IOuyiOyXkCDtlZwg67KI6ry066Gc66eMIOywvuyVhOyYqOuLpC4g7Jik7KeAIOyViuyVmOuLpOqzoCDsi6Trp53tlZjsp4Ag66eQ6rOgLCDri6Tsi5wg67K866Ck6528Lg==">
+        <div class="when"><span>🎁</span><b>12월 15일</b></div><p class="text">🔒 12월 15일에 공개됩니다</p>
+      </article>
+      <article class="hint answer" data-open="12-22" data-text="64OJ6riwIOqzhOyXtCDqsoDsnbQgKzE17JeQ7IScIOynhO2ZlO2VoCDrlYwsIDMwJSDtmZXrpaDroZwg7JuQ656YIOqygCDrjIDsi6Ag7YGs66as7Iqk66eI7IqkIOqygOycvOuhnCDsp4TtmZTtlanri4jri6QuIOyLpO2MqOuhnCArMTTroZwg65ao7Ja07KeA66m0IOybkOuemCDqsoDsnLzroZwg64+M7JWE6rCA64uILCDri6Tsi5wgKzE17JeQIOyYrOugpCDrmJAg64+E7KCE7ZWY7IS47JqULiDslYTsp4Eg7JeG64qUIOqygOydtCDrqLzsoIAg64KY7JmA7JqUIQ==">
+        <div class="when"><span>⭐</span><b>12월 22일</b></div><p class="text">🔒 12월 22일 정답 공개</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>알아 두세요</h2>
+    <ul class="notes">
+      <li>이벤트 기간은 <b>게임을 하는 PC의 날짜</b> 기준입니다.</li>
+      <li>조건을 만족하면 강화하던 검이 <b>확률로 크리스마스 검으로 진화</b>합니다. 새 칸에 따로 들어오는 선물이 아니에요.</li>
+      <li>크리스마스 검은 <b>최종형</b>이라 더 진화하지 않습니다. 강화 단계는 그대로 이어져요.</li>
+      <li>크리스마스 검은 <b>시즌이 끝나도 사라지지 않습니다.</b> 손에 넣은 사람의 도감에만 칸이 생겨요.</li>
+      <li><b>레이스 모드</b>에서는 이벤트가 적용되지 않습니다.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <p>찾았다면 디스코드 <b>⚔️강화-자랑</b> 채널에서 자랑해 주세요. 정답 공개 전 스포일러는 살짝 가려 주시면 감사해요!</p>
+    <a class="btn" href="https://discord.gg/NN6xvtbbcD" target="_blank" rel="noopener">⚒ 검 강화하기 디스코드</a>
+  </div>
+</div>
+</main>
+
+<footer>© 2026 Studio Dwarf Cafe · Made with Godot Engine</footer>
+
+<script>
+  // 힌트는 공개일(방문자 PC 날짜 기준)이 되면 열린다. 소스에 바로 보이지 않게 base64 로만 넣어 둠.
+  const YEAR = 2026;
+  const now = new Date();
+  const day = (mmdd) => { const [m, d] = mmdd.split("-").map(Number); return new Date(YEAR, m - 1, d); };
+  const decode = (b64) => new TextDecoder().decode(Uint8Array.from(atob(b64), c => c.charCodeAt(0)));
+  document.querySelectorAll(".hint").forEach(h => {
+    if (now >= day(h.dataset.open)) {
+      h.classList.add("open");
+      h.querySelector(".text").textContent = decode(h.dataset.text);
+    } else {
+      h.classList.add("locked");
+    }
+  });
+  const status = document.getElementById("status");
+  if (now >= day("12-01") && now < new Date(YEAR + 1, 0, 1)) { status.textContent = "🎄 지금 진행 중"; status.classList.add("live"); }
+  else if (now >= new Date(YEAR + 1, 0, 1)) { status.textContent = "이벤트가 끝났습니다 · 함께해 주셔서 고마워요"; }
+  else { status.textContent = "12월 1일 시작"; }
+  // 눈송이(픽셀)
+  const snow = document.querySelector(".snow");
+  for (let i = 0; i < 46; i++) {
+    const f = document.createElement("i");
+    const s = Math.random() < .3 ? 6 : 4;
+    f.style.cssText = `left:${Math.random() * 100}%;width:${s}px;height:${s}px;animation-duration:${6 + Math.random() * 8}s;animation-delay:${-Math.random() * 14}s`;
+    snow.appendChild(f);
+  }
+</script>
+</body>
+</html>

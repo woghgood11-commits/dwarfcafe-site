@@ -92,6 +92,22 @@ a { color: inherit; }
 .btn.ghost:hover { background: var(--cream-2); }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
+/* ── 공지 ── */
+.news { padding: 0 0 72px; }
+.news h2 { font-size: 15px; font-weight: 700; letter-spacing: .12em; color: var(--brown-mute); margin: 0 0 12px; }
+.notice {
+  display: flex; align-items: center; gap: 16px; text-decoration: none;
+  background: var(--paper); border: 1px solid color-mix(in srgb, var(--brown) 16%, transparent);
+  border-radius: var(--radius); padding: 18px 22px; transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.notice:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--brown) 35%, transparent); box-shadow: 0 8px 22px rgba(116,89,77,.14); }
+.notice .badge { flex: none; font-size: 12px; color: #fff; background: #C7343A; padding: 4px 10px; border-radius: 6px; }
+.notice .body { flex: 1; min-width: 0; }
+.notice strong { display: block; font-size: 17px; }
+.notice small { display: block; color: var(--brown-mute); font-size: 14px; }
+.notice .go { flex: none; font-size: 20px; color: var(--brown); }
+@media (max-width: 520px) { .notice { align-items: flex-start; flex-wrap: wrap; gap: 8px 12px; } .notice .go { display: none; } }
+
 /* ── 게임 (대장간) ── */
 .forge { background: var(--forge); color: var(--ice); position: relative; }
 .forge-hero {
@@ -234,6 +250,7 @@ dialog img { border-radius: 10px; max-height: 88vh; width: auto; margin: auto; }
       <span>DWARF CAFE STUDIO</span>
     </a>
     <ul>
+      <li><a class="link" href="#news">공지</a></li>
       <li><a class="link" href="#games">게임</a></li>
       <li><a class="link" href="#studio">스튜디오</a></li>
       <li><a class="link" href="#contact">문의</a></li>
@@ -254,6 +271,20 @@ dialog img { border-radius: 10px; max-height: 88vh; width: auto; margin: auto; }
 </header>
 
 <main>
+<section class="news" id="news">
+  <div class="wrap">
+    <h2>공지</h2>
+    <a class="notice" href="notice/christmas.html">
+      <span class="badge pixel">이벤트</span>
+      <span class="body">
+        <strong>🎄 크리스마스 대장간 — 숨겨진 검을 찾아라</strong>
+        <small>12월 1일 ~ 31일 · 크리스마스 한정 검 2종, 조건은 매주 공개되는 힌트로</small>
+      </span>
+      <span class="go">→</span>
+    </a>
+  </div>
+</section>
+
 <section class="forge" id="games">
   <div class="forge-hero">
     <div class="wrap">
